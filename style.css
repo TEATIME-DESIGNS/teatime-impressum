@@ -1,8 +1,9 @@
-/* textcolor = #ced0d3 */
 
 :root{
 --themecolor: #fcba03;
 --themecolortrans: #fcba037e;
+
+--trans: #ffffff00;
 
 --textcolor: #f1f0eb;
 --textinputecol: #ced0d3;
@@ -16,24 +17,27 @@
 --red: #ac0d0d;
 --green: #01b637;
 --blue: #0055ff;
-
---corner5px: 5px;
---corner10px: 10px;
 }
 
 body{
 background-color: var(--black);
 }
 
+h1-header{
+    color : var(--textcolor);
+    font-family: "Montserrat";
+    margin-left: 25px;
+    font-size: x-large;
+}
+
 h1{
-color : var(--textcolor);
-font-family: "Montserrat";
+    color : var(--textcolor);
+    font-family: "Montserrat";
 }
 
 h2 {
-    color: var(--textcolor);
+    color : var(--textcolor);
     font-family: "Montserrat";
-
 }
 
 h3 {
@@ -67,7 +71,7 @@ input {
 
     border-color:#06080800;
     border-bottom: 2px solid var(--themecolortrans);
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 10px;
     margin: 10px;
 
@@ -93,7 +97,7 @@ textarea {
 
     border-color:#06080800;
     border-bottom: 2px solid var(--themecolortrans);
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 10px;
     margin: 10px;
 
@@ -103,7 +107,7 @@ textarea {
 
 textarea:focus {
     outline: none;
-    border-color:#06080800;
+    border-color:var(--trans);
     border-bottom: 2px solid var(--themecolor);
     border-radius: 10px;
     padding: 10px;
@@ -153,6 +157,8 @@ a {
     color: var(--textcolor);
     font-family: 'Montserrat', Times, serif;
     text-decoration: none;
+    background-color: var(--holdercoltrans);
+
 
     border-bottom: 2px solid var(--themecolor);
     margin: 5px;
@@ -165,6 +171,8 @@ a:hover {
     border-color: var(--themecoltrans);
     color: var(--themecolor);
     transition: 0.5s;
+
+    background-color: var(--themecolortrans);
 
 
 }
@@ -185,6 +193,9 @@ header{
     padding: 10px;
     background-color: var(--holdercoltrans);
     border-radius: 5px;
+    border-bottom: 2px solid #fcba03;
+    
+
 
     margin-left: 0px;
 
@@ -194,10 +205,11 @@ header{
 }
 
 .logo{
-    float: left;
-    margin: 10px;
-    /* position: absolute; */
-    /* left: 0px; */
+    /* float: left;
+    margin: 10px; */
+    position: absolute;
+    left: 25px;
+    top: 19px;
     width: 50px;
     height: 50px;
 }
@@ -222,18 +234,42 @@ header{
     margin-inline: auto;
 }
 
-.card {
+/* .card {
+    margin: 20px;
+    border-radius: 5px;
+    padding: 10px;
+    width: 500px;
+    height: 360px;
+    display: flex;
+
+    flex-direction: column;
+    border: 2px solid var(--holdercoltrans);
+} */
+.card{
     margin: 20px;
     background-color: var(--holdercolor);
     border-radius: 5px;
     padding: 10px;
-    width: 300px;
-    height: 300px;
+    width: 500px;
+    height: 360px;
     display: flex;
 
     flex-direction: column;
     border: 2px solid var(--holdercoltrans);
 }
+
+/* .devcard {
+    margin: 20px;
+    border-radius: 5px;
+    padding: 10px;
+    width: 500px;
+    height: 360px;
+    display: flex;
+
+    flex-direction: column;
+    border: 2px solid var(--holdercoltrans);
+} */
+
 
 card-h1 {
     font-size: 1.5rem;
@@ -253,7 +289,7 @@ card-h1 {
 }
 
 card-h2 {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     margin-top: 10px;
     font-family : "Montserrat";
     color: var(--textcolor);
@@ -263,21 +299,73 @@ card-h2 {
 }
 
 card-footer{
+    position: relative;
+    bottom: 0;
     margin-top: auto;
     font-size: 1.0rem;
-    margin-top: 10px;
+
     font-family : "Montserrat";
     color: var(--textcolor);
     background-color: var(--holdercoltrans);
     border-radius: 5px;
     padding: 10px;
 
-    border: #f1f0eb00;
+    border: var(--trans);
     border-bottom: var(--themecolor);
     border-style: solid;
     border-width: 2px;
     border-radius: 5px;
 
+
+
+
+
+}
+
+/* .card-button{
+    margin-top: auto;
+    font-size: 1.0rem;
+    margin-top: 10px;
+    background-color: var(--holdercoltrans);
+    border-radius: 5px;
+    padding: 10px;
+
+    border: #f1f0eb00;
+    border-bottom: var(--themecolor);
+    border-top: var(--themecolor);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+
+}
+
+.cardbutton:hover{
+    color: var(--black);
+    transition: 0.5s;
+    cursor: pointer;
+} */
+
+.card-redirect{
+    margin:auto;
+    font-size: 1.0rem;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 2px;
+    margin-top: 10px;
+
+    border-color: #f1f0eb00;
+
+    border-bottom: 2px solid var(--themecolor);
+    border-radius: 5px; 
+    background-color: var(--holdercoltrans);
+    
+}
+
+.card-redirect:hover{
+    transition: 0.5s;
+    cursor: pointer;
+
+    background-color: var(--themecolortrans);
 }
 
 /* ---------------------------------------------- */
@@ -320,7 +408,7 @@ tag-blue {
 }
 
 tag-yellow {
-    background-color: var(--themecolor);
+    background-color: var(--themecolortrans);
     color: var(--textcolor);
     border-radius: 5px;
     padding: 5px;
@@ -378,3 +466,16 @@ footer {
     /* height: 0.9rem; */
 
 }
+
+
+img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* ---------------------------------------------- */
+/* CUSTOM CSS UNDER THIS LINE */
+/* ---------------------------------------------- */
+
+
